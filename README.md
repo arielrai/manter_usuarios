@@ -1,9 +1,15 @@
-Aplicação Java EE de teste para requisições de movimentação de um robô via rest!
+Quais bibliotecas além das disponíveis pelo servidor você usou e porquê?
+Foi apenas adicionado o driver JDBC do postgres como uma nova module do wildfly para conexão com o banco
 
-Como executar:
+Qual o tempo aproximado gasto por você no desenvolvimento do software?
+(Não deve ser considerado o tempo gasto com ambiente)
+15h
 
-1 - mvn clean install 
+Quais as dificuldades que você enfrentou no desafio?
+Faz algum tempo que não desenvolvo nenhum projeto com Java EE, isso me dificultou um pouco o projeto.
 
-2 - deploy "source_folder"/target no wildfly 10
 
-3 - está executando!
+TODO:
+FA4
+FA5
+FA8
