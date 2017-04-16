@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/screen.css">
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="js/libs/angular.min.js"></script>
+    <script src="js/libs/angular-ui-router.min.js"></script>
+    <script src="js/libs/angular-input-masks.br.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/usersController.js"></script>
+    <script src="js/controllers/userController.js"></script>
+</head>
+
+<!-- apply our angular app to our site -->
+<body ng-app="userApp" ng-controller="appController">
+<div class="container">
+    <div class="row">
+
+
+        <div class="alert alert-success alert-dismissable" ng-if="message.type == 'success'">
+            <a class="close" aria-label="close" ng-click="clearMessages()">x</a>
+            {{message.text}}
+        </div>
+        <div class="alert alert-danger alert-dismissable" ng-if="message.type == 'error'">
+            <a class="close" aria-label="close" ng-click="clearMessages()">x</a>
+            {{message.text}}
+        </div>
+
+        <div ui-view></div>
+    </div>
+</div>
+</body>
+</html>
