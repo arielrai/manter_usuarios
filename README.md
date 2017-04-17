@@ -13,3 +13,11 @@ TODO:
 FA4
 FA5
 
+Executando a aplicação
+1 - Adicionar driver do postgres no servidor de aplicação. Nome: postgresql
+2 - Verificar usuário e senha do banco em: DefaultDS-ds
+3 - Clean install application
+4 - Deploy war
+5 - Já está rodando em http://localhost:8080/manter_usuario !
+
+
