@@ -11,7 +11,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
 		url : '/users',
 		templateUrl : 'views/users.html'
 	}).state('user', {
-		url : '/user',
+		url : '/user?params',
 		templateUrl : 'views/user.html'
 	});
 

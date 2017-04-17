@@ -43,7 +43,6 @@
                     <div class="form-group">
                         <label for="telefone"> Função *</label>
                         <select class="form-control" ng-model="bean.perfil.codigo" ng-required="true">
-                            <option value></option>
                             <option ng-repeat="perfil in comboOptions.usuarioFuncao" value={{perfil.codigo}}>
                                 {{perfil.descricao}}
                             </option>

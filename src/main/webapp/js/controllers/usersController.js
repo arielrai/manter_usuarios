@@ -1,6 +1,6 @@
 var myApp = angular.module('userApp');
 
-myApp.controller('usersController', ['$scope', '$rootScope', '$http', function($scope, $rootScope, $http) {
+myApp.controller('usersController', ['$scope', '$rootScope', '$http' ,'$state', function($scope, $rootScope, $http, $state) {
 	$scope.listUsuarios = function(){
 		$http.get("/manter_usuario/rest/users").then(function(response){
 			$scope.usuarios = response.data;
@@ -33,4 +33,9 @@ myApp.controller('usersController', ['$scope', '$rootScope', '$http', function($
 			}
 		});
 	}
+
+	$scope.getHref = function(bean){
+		return $state.href("user", {params: angular.toJson(bean)});
+	};
+
 }]);

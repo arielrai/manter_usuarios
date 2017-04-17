@@ -194,17 +194,15 @@ public class UsuarioExternoRepository {
 	 * @return o {@link UsuarioExterno} criado
 	 */
 	public UsuarioExterno createUsuarioExterno(UsuarioExternoDTO usuarioExterno) {
-		// Validações
 		// cpf inválido
 		if (!isCpfValid(usuarioExterno.getCpf())) {
 			throw new IllegalArgumentException(AppResources.getMessage("usuario.cpf.invalido"));
 		}
-		// Cpf duplicado
-		if (findByCPF(usuarioExterno.getCpf()) != null) {
-			throw new IllegalArgumentException(AppResources.getMessage("usuario.duplicado"));
-		}
-
 		if (usuarioExterno.getVersion() == null) {
+			// Cpf duplicado
+			if (findByCPF(usuarioExterno.getCpf()) != null) {
+				throw new IllegalArgumentException(AppResources.getMessage("usuario.duplicado"));
+			}
 			UsuarioExterno toSaveUsuarioExterno = new UsuarioExterno();
 			toSaveUsuarioExterno.setCpf(usuarioExterno.getCpf());
 			dtoToEntity(usuarioExterno, toSaveUsuarioExterno);
