@@ -21,7 +21,7 @@
     </pool>
     <security>
         <user-name>postgres</user-name>
-        <password>rairodrigues123</password>
+        <password>senha</password>
     </security>
  </datasource>
  
